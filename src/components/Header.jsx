@@ -1,9 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import './header.css'
 
 function Header() {
   return (
-    <ul className="nav nav-tabs">
+    <div className='d-flex'>
+    <ul className="nav nav-pills header fixed-top justify-content-center">
       <li className="nav-item">
         <NavLink
           to="/"
@@ -37,6 +39,7 @@ function Header() {
         </NavLink>
       </li>
     </ul>
+    </div>
   );
 }
 

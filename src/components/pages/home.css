@@ -1,9 +1,7 @@
-.home-wrapper {
-    display: flex;
-}
 
-.card-picture {
-    margin-left: 5rem;
+
+.card-picture, .card-about {
+    margin: 2rem !important;
 }
 
 .profile-pic {

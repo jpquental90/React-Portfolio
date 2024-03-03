@@ -1,7 +1,18 @@
 .nav {
-    background-color: rgb(213, 213, 223);
+    background-color: rgb(253, 219, 151);
 }
 
 .nav-item {
-    padding: 0 20px 0 20px;
+    margin: 0 20px 0 20px;
+    background-color: rgb(241, 240, 240);
+    border-radius: 4%;
+}
+
+.nav-link {
+    color: rgb(234, 128, 79) !important;
+}
+
+.active {
+    background-color: rgb(234, 128, 79) !important;
+    color: rgb(251, 251, 251) !important;
 }

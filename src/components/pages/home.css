@@ -1,3 +1,11 @@
 .home-wrapper {
     display: flex;
 }
+
+.card-picture {
+    margin-left: 5rem;
+}
+
+.profile-pic {
+    max-width: 100%;
+}

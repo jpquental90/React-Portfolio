@@ -1,17 +1,43 @@
 [
     {
-      "id": "1",
-      "title": "Project 1",
-      "deployedLink": "https://example.com/project1",
-      "githubLink": "https://github.com/example/project1",
-      "screenshot": "project1-screenshot.jpg"
+    "id": "1",
+    "title": "Code Quiz",
+    "deployedLink": "https://jpquental90.github.io/Code-Quiz---edX-Bootcamp-Challenge-6/",
+    "githubLink": "https://github.com/jpquental90/Code-Quiz---edX-Bootcamp-Challenge-6",
+    "screenshot": "CodeQuizScreenshot.jpg"
     },
     {
-        "id": "2",
-        "title": "Project 2",
-        "deployedLink": "https://example.com/project2",
-        "githubLink": "https://github.com/example/project2",
-        "screenshot": "project2-screenshot.jpg"
-      }
-      // Add more projects as needed
+    "id": "2",
+    "title": "Daily Planner App",
+    "deployedLink": "https://jpquental90.github.io/Daily-Planner-App---edX-Bootcamp-Challenge-7/",
+    "githubLink": "https://github.com/jpquental90/Daily-Planner-App---edX-Bootcamp-Challenge-7",
+    "screenshot": "DailyPlannerScreenshot.jpg"
+    },
+    {
+    "id": "3",
+    "title": "Weather Dashboard",
+    "deployedLink": "https://jpquental90.github.io/Weather-Dashboard---edX-Bootcamp-Challenge-8/",
+    "githubLink": "https://github.com/jpquental90/Weather-Dashboard---edX-Bootcamp-Challenge-8",
+    "screenshot": "WeatherDashboardScreenshot.jpg"
+    },
+    {
+    "id": "4",
+    "title": "RhymeRadar",
+    "deployedLink": "https://jpquental90.github.io/RhymeRadar/",
+    "githubLink": "https://github.com/jpquental90/RhymeRadar",
+    "screenshot": "RhymeRadarScreenshot.jpg"
+    },
+    {
+    "id": "5",
+    "title": "README.md Generator",
+    "deployedLink": "https://drive.google.com/file/d/1YHyrj9My0cV6ysvzc8prTDC6rLOTqWAn/view",
+    "githubLink": "https://github.com/jpquental90/Professional-README-Generator---edX-Bootcamp-Challenge-11",
+    "screenshot": "READMEScreenshot.jpg"
+    },
+    {
+    "id": "6",
+    "title": "Team Profile Generator",
+    "githubLink": "https://github.com/jpquental90/Test-Driven-Development-Team-Profile-Generator---edX-Bootcamp-Challenge-12",
+    "screenshot": "TeamProfileGeneratorScreenshot.jpg"
+    }          
 ]

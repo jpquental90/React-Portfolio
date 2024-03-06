@@ -48,9 +48,18 @@ function Contact() {
     }
   };
   return (
-    <div>
+    <div className="contact-wrapper row justify-content-center main-content" >
     <h1>Contact</h1>
-    <section>
+    <div className="card card-about col-md-5" >
+        <div className="card-body">
+          <p>Email: <a href="mailto:joanapquental@gmail.com">joanapquental@gmail.com</a></p>
+          <p>CV: <a href="https://drive.google.com/file/d/16zIhyyGNWJulZ2MSxDCr4lp75qQEHJ_i/view?usp=sharing" target="_blank" rel="noopener noreferrer">PDF</a></p>
+          <p>GitHub: <a href="https://github.com/jpquental90" target="_blank" rel="noopener noreferrer">https://github.com/jpquental90</a></p>
+          <p>LinkedIn: <a href="https://www.linkedin.com/in/joana-quental-31611a293/" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/joana-quental-31611a293/</a></p>
+        </div>
+      </div>
+      <div className="card card-about col-md-5" >
+      <section>
       <form id="contact-form" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Name:</label>
@@ -87,6 +96,7 @@ function Contact() {
         <button type="submit">Submit</button>
       </form>
     </section>
+    </div>
     </div>
   );
 }

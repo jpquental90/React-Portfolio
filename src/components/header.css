@@ -1,22 +1,18 @@
-.navbar-wrapper {
-    z-index: 2;
-}
-
 .nav {
-    background-color: rgb(253, 219, 151);
+    background-color: rgb(224, 223, 223);
 }
 
 .nav-item {
     margin: 0 20px 0 20px;
-    background-color: rgb(241, 240, 240);
-    border-radius: 4%;
+    background-color: rgb(69, 140, 182);
+    border-radius: 8%;
 }
 
 .nav-link {
-    color: rgb(234, 128, 79) !important;
+    color: rgb(253, 253, 253) !important;
 }
 
 .active {
-    background-color: rgb(234, 128, 79) !important;
-    color: rgb(251, 251, 251) !important;
+    background-color: rgb(0, 0, 0) !important;
+    border-radius: 8%;
 }

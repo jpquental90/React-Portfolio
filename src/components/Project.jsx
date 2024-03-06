@@ -16,7 +16,7 @@ const Project = ({ projectData }) => {
   const { title, deployedLink, githubLink, screenshot } = projectData;
 
   return (
-      <div className="card card-about col-md-5 align-items-center" >
+      <div className="card card-about col-md-5 col-sm-6 col-6 align-items-center project-cards" >
         <div className="card-body">
           <h5 className="card-title">{title}</h5>
           <img src={screenshot} alt={`${title} Screenshot`} />

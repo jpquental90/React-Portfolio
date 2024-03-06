@@ -5,10 +5,10 @@ import './home.css'
 function Home() {
   return (
     <div className="home-wrapper row justify-content-center main-content">
+      <h1 className="page-title">Portfolio Home</h1>
       <div className="card card-about col-md-6" >
         <div className="card-body">
-          <h5 className="card-title">Front-End Developer</h5>
-          <h6 className="card-subtitle mb-2 text-body-secondary">Portfolio</h6>
+          <h5 className="card-title intro-title">Front-End Developer</h5>
           <ul>
             <li>Junior Front-End Developer with a Front-End Development Certificate from edX</li>
             <li>Always eager to learn more and open to working with other languages and tools</li>
@@ -20,7 +20,7 @@ function Home() {
       <div className="card card-picture col-md-3">
         <div className="card-body">
           <img src="images/profilepic.jpg" alt="profile picture" className="profile-pic"/>
-          <p className="card-text">Joana Quental</p>
+          <p className="card-text personal-name">Joana Quental</p>
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Separate component for all the contact links, allowing it to be resuable as needed
 const ContactLinks = () => {
   return (
     <div className="card contact-card">

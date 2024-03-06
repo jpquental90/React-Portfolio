@@ -1,6 +1,7 @@
 # React Portfolio
 
-This repository contains my portfolio created using React. 
+This repository contains my portfolio created using React. Link to deployed application: https://flourishing-biscochitos-4b490a.netlify.app/
+
 
 ## Description
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import './home.css'
 
-
+// Returning the relevant HTML code for this section; as it was a small section I decided not to create separate components
 function Home() {
   return (
     <div className="home-wrapper row justify-content-center main-content">

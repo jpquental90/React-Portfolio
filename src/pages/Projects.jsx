@@ -2,8 +2,8 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import projectsData from '../data/projectsData.json';
 import Project from '../components/Project';
-import './projects.css';
 
+// This file links with the projectsData.json to map and list all the individual projects using the same reusable code
 const Projects = () => {
   const { projectId } = useParams(); 
 

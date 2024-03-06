@@ -6,6 +6,7 @@ import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import './App.css'
 
+// This function brings up the key pages of the app
 function App() {
   return (
     <Router>

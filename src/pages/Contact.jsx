@@ -3,6 +3,7 @@ import ContactForm from '../components/ContactForm';
 import ContactLinks from '../components/ContactLinks';
 import './contact.css';
 
+// The Contact page renders two components which were created separately
 const Contact = () => {
   return (
     <div className="contact-wrapper row d-flex justify-content-center main-content">

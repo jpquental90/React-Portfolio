@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import * as bootstrap from 'bootstrap'
 import './index.css'
 
+// This links with the root element of the index.html file, ensuring that all added components are rendered within that element
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+// Some handling event logic was included below. Not quite working yet, but I have been told it's not strictly required. To be continued going forward.
 const ContactForm = () => {
   const [formState, setFormState] = useState({
     name: '',
@@ -15,29 +16,24 @@ const ContactForm = () => {
     e.preventDefault();
     if (!errorMessage) {
       console.log('Submit Form', formState);
-      // Add your form submission logic here
     }
   };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
   
-    // Update the state using the callback function
     setFormState((prevState) => ({
       ...prevState,
       [name]: value,
     }));
   
-    // Validate email only if the field being changed is 'email'
     if (name === 'email') {
       const isValid = validateEmail(value);
       setErrorMessage(isValid ? '' : 'Your email is invalid.');
     } else {
-      // Clear error message for other fields
       setErrorMessage('');
     }
   
-    // Log the updated state after the state has been updated
     console.log('Handle Form', { ...formState, [name]: value });
   };
   
@@ -46,6 +42,7 @@ const ContactForm = () => {
     return emailRegex.test(email);
   };
 
+  // This returns form HTML elements and a submit button
   return (
     <div className="card col-md-5">
       <form id="contact-form" onSubmit={handleSubmit}>

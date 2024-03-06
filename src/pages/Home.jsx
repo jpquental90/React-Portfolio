@@ -9,7 +9,7 @@ import './home.css'
 
 function Home() {
   return (
-    <div className="home-wrapper row justify-content-center">
+    <div className="home-wrapper row justify-content-center main-content">
       <div className="card card-about col-md-6" >
         <div className="card-body">
           <h5 className="card-title">Front-End Developer</h5>

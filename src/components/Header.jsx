@@ -4,7 +4,7 @@ import './header.css'
 
 function Header() {
   return (
-    <div className='d-flex'>
+    <div className='d-flex navbar-wrapper'>
       <ul className="nav navbar header fixed-top justify-content-center">
         <li className="nav-item">
           <NavLink

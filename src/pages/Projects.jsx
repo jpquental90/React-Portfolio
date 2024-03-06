@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import projectsData from '../../data/projectsData.json';
-import Project from './Project';
+import projectsData from '../data/projectsData.json';
+import Project from '../components/Project';
 
 // Projects page:
 // Must render six instances of the Project component dynamically
@@ -16,8 +16,8 @@ const Projects = () => {
     : projectsData;
 
   return (
-    <div>
-      <h1>Projects Page</h1>
+    <div className="projects-wrapper row justify-content-center main-content">
+      <h1>Projects</h1>
       {renderProjects.map((project) => (
         <Project key={project.id} projectData={project} />
       ))}

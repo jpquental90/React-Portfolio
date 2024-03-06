@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import projectsData from '../data/projectsData.json';
 import Project from '../components/Project';
-
+import './projects.css';
 
 const Projects = () => {
   const { projectId } = useParams(); 

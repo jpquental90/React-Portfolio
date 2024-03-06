@@ -1,10 +1,7 @@
-h1 {
-    margin: 4rem !important;
-}
-
 .projects-wrapper {
-    display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
+
+    display: inline-block;
+    overflow-x: hidden !important;
     justify-content: center; /* Center items horizontally */
     align-items: flex-start; /* Align items at the start vertically */
 }

@@ -26,12 +26,13 @@ body {
 
 .card {
   border: none;
-  background-color: rgb(241, 241, 241) !important;
-  align-items: center !important;
+  background-color: rgb(241, 241, 241);
+  margin: 2rem;
 }
 
 .card-body {
   max-width: 100%;
+  flex: none;
 }
 
 .card-title {
@@ -41,9 +42,8 @@ body {
 img {
   max-width: 100%;
   max-height: 200px;
-  
 }
 
 .main-content {
-  padding-top: 60px; /* Adjust the value based on your header height */
+  padding-top: 60px;
 }

@@ -1,16 +1,5 @@
-import React from 'react';
-
-// Contact page:
-
-// Must include contact information:
-
-// Email address
-// Link to a PDF version of your CV
-// Link to your GitHub profile
-// Link to your LinkedIn page
-// Must have a contact form for handling events
-
-import { useState } from 'react';
+import React, { useState } from 'react';
+import './contact.css';
 
 function Contact() {
   const [formState, setFormState] = useState({
@@ -20,83 +9,106 @@ function Contact() {
   });
 
   const [errorMessage, setErrorMessage] = useState('');
+
   const { name, email, message } = formState;
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!errorMessage) {
       console.log('Submit Form', formState);
+      // Add your form submission logic here
     }
   };
+
   const handleChange = (e) => {
-    if (e.target.name === 'email') {
-      const isValid = validateEmail(e.target.value);
-      if (!isValid) {
-        setErrorMessage('Your email is invalid.');
-      } else {
-        setErrorMessage('');
-      }
-    } else {
-      if (!e.target.value.length) {
-        setErrorMessage(`${e.target.name} is required.`);
-      } else {
-        setErrorMessage('');
-      }
-    }
-    if (!errorMessage) {
-      setFormState({ ...formState, [e.target.name]: e.target.value });
-      console.log('Handle Form', formState);
-    }
+    const { name, value } = e.target;
+
+    // Update the state using the callback function
+    setFormState(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
+
+    // Log the updated state after the state has been updated
+    console.log('Handle Form', { ...formState, [name]: value });
+  }
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
   };
+
   return (
-    <div className="contact-wrapper row justify-content-center main-content" >
-    <h1>Contact</h1>
-    <div className="card card-about col-md-5" >
+    <div className="contact-wrapper row d-flex justify-content-center main-content" >
+      <h1 className="page-title">Contact</h1>
+
+      
+      <div className="card col-md-5">
+        <form id="contact-form" onSubmit={handleSubmit}>
+          <div>
+            <label htmlFor="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={name}
+              onChange={handleChange}
+              autoComplete="name"
+            />
+          </div>
+          <div>
+            <label htmlFor="email">Email address:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={email}
+              onChange={handleChange}
+              autoComplete="email"
+            />
+          </div>
+          <div>
+            <label htmlFor="message">Message:</label>
+            <textarea
+              name="message"
+              id="message"
+              rows="5"
+              value={message}
+              onChange={handleChange}
+              autoComplete="off"
+            />
+          </div>
+          {errorMessage && (
+            <div>
+              <p className="error-text">{errorMessage}</p>
+            </div>
+          )}
+          <button type="submit" disabled={!!errorMessage} className="btn btn-primary">
+            Submit
+          </button>
+        </form>
+
+      </div>
+      <div className="card contact-card" >
         <div className="card-body">
-          <p>Email: <a href="mailto:joanapquental@gmail.com">joanapquental@gmail.com</a></p>
-          <p>CV: <a href="https://drive.google.com/file/d/16zIhyyGNWJulZ2MSxDCr4lp75qQEHJ_i/view?usp=sharing" target="_blank" rel="noopener noreferrer">PDF</a></p>
-          <p>GitHub: <a href="https://github.com/jpquental90" target="_blank" rel="noopener noreferrer">https://github.com/jpquental90</a></p>
-          <p>LinkedIn: <a href="https://www.linkedin.com/in/joana-quental-31611a293/" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/joana-quental-31611a293/</a></p>
+          <span className="contact-span">
+            <img src="images/gmailicon.png" alt="gmail icon" className="contact-icon" />
+            <a href="mailto:joanapquental@gmail.com">joanapquental@gmail.com</a>
+          </span>
+          <span className="contact-span">
+            <img src="images/cvicon.png" alt="cv icon" className="contact-icon" />
+            <a href="https://drive.google.com/file/d/16zIhyyGNWJulZ2MSxDCr4lp75qQEHJ_i/view?usp=sharing" target="_blank" rel="noopener noreferrer">CV</a>
+          </span>
+          <span className="contact-span">
+            <img src="images/githubicon.png" alt="github icon" className="contact-icon" />
+            <a href="https://github.com/jpquental90" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </span>
+          <span className="contact-span">
+            <img src="images/linkedinicon.png" alt="linkedin icon" className="contact-icon" />
+            <a href="https://www.linkedin.com/in/joana-quental-31611a293/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </span>
         </div>
       </div>
-      <div className="card card-about col-md-5" >
-      <section>
-      <form id="contact-form" onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="name">Name:</label>
-          <input
-            type="text"
-            name="name"
-            defaultValue={name}
-            onBlur={handleChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="email">Email address:</label>
-          <input
-            type="email"
-            name="email"
-            defaultValue={email}
-            onBlur={handleChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="message">Message:</label>
-          <textarea
-            name="message"
-            rows="5"
-            defaultValue={message}
-            onBlur={handleChange}
-          />
-        </div>
-        {errorMessage && (
-          <div>
-            <p className="error-text">{errorMessage}</p>
-          </div>
-        )}
-        <button type="submit">Submit</button>
-      </form>
-    </section>
-    </div>
     </div>
   );
 }

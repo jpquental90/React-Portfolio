@@ -21,17 +21,26 @@ const ContactForm = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-
+  
     // Update the state using the callback function
-    setFormState(prevState => ({
+    setFormState((prevState) => ({
       ...prevState,
-      [name]: value
+      [name]: value,
     }));
-
+  
+    // Validate email only if the field being changed is 'email'
+    if (name === 'email') {
+      const isValid = validateEmail(value);
+      setErrorMessage(isValid ? '' : 'Your email is invalid.');
+    } else {
+      // Clear error message for other fields
+      setErrorMessage('');
+    }
+  
     // Log the updated state after the state has been updated
     console.log('Handle Form', { ...formState, [name]: value });
-  }
-
+  };
+  
   const validateEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);

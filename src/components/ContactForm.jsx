@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './contactform.css'
 
 // Form handling events logic
 const ContactForm = () => {
@@ -49,7 +50,7 @@ const ContactForm = () => {
   return (
     <div className="card col-md-5">
       <form id="contact-form" onSubmit={handleFormSubmit}>
-        <div>
+        <div className="form-element">
           <label htmlFor="name">Name:</label>
           <input
             type="text"
@@ -60,7 +61,7 @@ const ContactForm = () => {
             autoComplete="name"
           />
         </div>
-        <div>
+        <div className="form-element">
           <label htmlFor="email">Email address:</label>
           <input
             type="email"
@@ -71,7 +72,7 @@ const ContactForm = () => {
             autoComplete="email"
           />
         </div>
-        <div>
+        <div className="form-element">
           <label htmlFor="message">Message:</label>
           <textarea
             name="message"

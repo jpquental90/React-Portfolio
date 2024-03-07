@@ -1,4 +1,5 @@
 import React from 'react';
+import './contactlinks.css'
 
 // Separate component for all the contact links, allowing it to be resuable as needed
 const ContactLinks = () => {

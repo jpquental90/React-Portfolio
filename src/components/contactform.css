@@ -1,0 +1,17 @@
+form {
+    text-align: center !important;
+    padding: 15px;
+}
+
+label {
+    width: 10rem;
+    text-wrap: wrap;
+}
+
+input, textarea {
+    width: 15rem;
+}
+
+.form-element {
+    margin-top: 0.5rem;
+}

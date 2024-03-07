@@ -6,7 +6,7 @@ function Home() {
   return (
     <div className="home-wrapper row justify-content-center main-content">
       <h1 className="page-title">Portfolio Home</h1>
-      <div className="card card-about col-md-6" >
+      <div className="card card-about col-md-6 d-flex justify-content-center" >
         <div className="card-body">
           <h5 className="card-title intro-title">Front-End Developer</h5>
           <ul>

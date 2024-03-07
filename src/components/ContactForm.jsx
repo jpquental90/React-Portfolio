@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-// Some handling event logic was included below. Not quite working yet, but I have been told it's not strictly required. To be continued going forward.
+// Form handling events logic
 const ContactForm = () => {
-  const [formState, setFormState] = useState({
+  const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
@@ -10,50 +10,53 @@ const ContactForm = () => {
 
   const [errorMessage, setErrorMessage] = useState('');
 
-  const { name, email, message } = formState;
+  const handleInputChange = (event) => {
+    let value = event.target.value;
+    const name = event.target.name;
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!errorMessage) {
-      console.log('Submit Form', formState);
+    if (name === 'password') {
+      value = value.substring(0, 15);
     }
-  };
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-  
-    setFormState((prevState) => ({
-      ...prevState,
+    setFormData({
+      ...formData,
       [name]: value,
-    }));
-  
-    if (name === 'email') {
-      const isValid = validateEmail(value);
-      setErrorMessage(isValid ? '' : 'Your email is invalid.');
-    } else {
-      setErrorMessage('');
-    }
-  
-    console.log('Handle Form', { ...formState, [name]: value });
-  };
-  
-  const validateEmail = (email) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
+    });
   };
 
-  // This returns form HTML elements and a submit button
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+
+    if (!formData.name || !formData.email) {
+      setErrorMessage('Fill out your name and email, please!');
+      return;
+    }
+
+    // Form submission logic here - we have not covered how to do this
+
+    // Reseting form data after submission
+    setFormData({
+      name: '',
+      email: '',
+      message: '',
+    });
+
+    // Clearing error message
+    setErrorMessage('');
+  };
+
+  // Returning the HTML form content
   return (
     <div className="card col-md-5">
-      <form id="contact-form" onSubmit={handleSubmit}>
+      <form id="contact-form" onSubmit={handleFormSubmit}>
         <div>
           <label htmlFor="name">Name:</label>
           <input
             type="text"
             id="name"
             name="name"
-            value={name}
-            onChange={handleChange}
+            value={formData.name}
+            onChange={handleInputChange}
             autoComplete="name"
           />
         </div>
@@ -63,8 +66,8 @@ const ContactForm = () => {
             type="email"
             id="email"
             name="email"
-            value={email}
-            onChange={handleChange}
+            value={formData.email}
+            onChange={handleInputChange}
             autoComplete="email"
           />
         </div>
@@ -74,8 +77,8 @@ const ContactForm = () => {
             name="message"
             id="message"
             rows="5"
-            value={message}
-            onChange={handleChange}
+            value={formData.message}
+            onChange={handleInputChange}
             autoComplete="off"
           />
         </div>

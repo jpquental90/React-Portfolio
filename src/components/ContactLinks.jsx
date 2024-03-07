@@ -4,7 +4,7 @@ import React from 'react';
 const ContactLinks = () => {
   return (
     <div className="card contact-card">
-      <div className="card-body">
+      <div className="card-body contacts-body">
         <span className="contact-span">
           <img src="images/gmailicon.png" alt="gmail icon" className="contact-icon" />
           <a href="mailto:joanapquental@gmail.com">joanapquental@gmail.com</a>

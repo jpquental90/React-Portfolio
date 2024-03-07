@@ -20,6 +20,7 @@ body {
   border: none;
   background-color: rgb(241, 241, 241);
   margin: 2rem;
+  box-shadow: 3px 3px 6px rgba(162, 162, 162, 0.865);
 }
 
 .card-body {
@@ -29,11 +30,6 @@ body {
 
 .card-title {
   font-weight: 700;
-}
-
-img {
-  max-width: 100%;
-  max-height: 200px;
 }
 
 .main-content {

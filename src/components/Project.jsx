@@ -15,14 +15,11 @@ const Project = ({ projectData }) => {
         {/* Deployment link is only added if it exists */}
         {deployedLink && (
           <p>
-            <strong>Deployment Link:</strong>{' '}
-            <a href={deployedLink} target="_blank" rel="noopener noreferrer">{deployedLink}</a>
+            <strong><a href={deployedLink} target="_blank" rel="noopener noreferrer">Deployment Link</a></strong>
           </p>
         )}
-
         <p>
-          <strong>GitHub Repository:</strong>{' '}
-          <a href={githubLink} target="_blank" rel="noopener noreferrer">{githubLink}</a>
+          <strong><a href={githubLink} target="_blank" rel="noopener noreferrer">GitHub Repository</a></strong>
         </p>
       </div>
     </div>

@@ -2,3 +2,8 @@
     padding-top: 1rem;
     font-weight: 500;
 }
+
+.profile-pic {
+    max-width: 100%;
+    max-height: 200px;
+}

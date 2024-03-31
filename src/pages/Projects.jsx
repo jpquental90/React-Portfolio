@@ -1,19 +1,23 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import projectsData from '../data/projectsData.json';
+import groupProjectsData from '../data/groupProjectsData.json'; // Import group projects data
+import individualProjectsData from '../data/individualProjectsData.json'; 
 import Project from '../components/Project';
 
-// This file links with the projectsData.json to map and list all the individual projects using the same reusable code
 const Projects = () => {
-  const { projectId } = useParams(); 
+  const { projectId } = useParams();
 
-  const renderProjects = projectId
-    ? [projectsData.find((project) => project.id === projectId)]
-    : projectsData;
+  // Determine which set of projects to render based on the route parameter
+  const renderProjects = projectId ? [individualProjectsData.find((project) => project.id === projectId)] : individualProjectsData;
 
   return (
     <div className="projects-wrapper row justify-content-center main-content ">
       <h1>Projects</h1>
+      <h2>Group Projects</h2>
+      {groupProjectsData.map((project) => (
+        <Project key={project.id} projectData={project} />
+      ))}
+      <h2>Individual Projects</h2>
       {renderProjects.map((project) => (
         <Project key={project.id} projectData={project} />
       ))}

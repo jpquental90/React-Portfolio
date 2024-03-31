@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './project.css'
 
 const Project = ({ projectData }) => {
-  const { title, deployedLink, githubLink, screenshot } = projectData;
+  const { title, deployedLink, video, githubLink, screenshot } = projectData;
 
   // Rendering the individual projects from projectsData.json into the Projects page using the same reusable code
   return (
@@ -12,10 +12,15 @@ const Project = ({ projectData }) => {
         <h5 className="card-title project-title">{title}</h5>
         <img src={screenshot} alt={`${title} Screenshot`} className="project-image" />
 
-        {/* Deployment link is only added if it exists */}
+        {/* Deployment and video links are only added if they exist */}
         {deployedLink && (
           <p>
             <strong><a href={deployedLink} target="_blank" rel="noopener noreferrer">Deployment Link</a></strong>
+          </p>
+        )}
+        {video && (
+          <p>
+            <strong><a href={video} target="_blank" rel="noopener noreferrer">Video Walkthrough</a></strong>
           </p>
         )}
         <p>

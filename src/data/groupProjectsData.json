@@ -1,0 +1,15 @@
+[{
+    "id": "1",
+    "title": "mAite",
+    "deployedLink": "https://maite10.netlify.app/",
+    "githubLink": "https://github.com/jpquental90/mAIte",
+    "screenshot": "images/mAiteScreenshot.png"
+},
+{
+    "id": "2",
+    "title": "RhymeRadar",
+    "deployedLink": "https://jpquental90.github.io/RhymeRadar/",
+    "githubLink": "https://github.com/jpquental90/RhymeRadar",
+    "screenshot": "images/RhymeRadarScreenshot.png"
+}
+]

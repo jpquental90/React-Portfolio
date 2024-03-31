@@ -13,11 +13,11 @@ const Projects = () => {
   return (
     <div className="projects-wrapper row justify-content-center main-content ">
       <h1>Projects</h1>
-      <h2>Group Projects</h2>
+      <h2 class="project-type">Group Projects</h2>
       {groupProjectsData.map((project) => (
         <Project key={project.id} projectData={project} />
       ))}
-      <h2>Individual Projects</h2>
+      <h2 class="project-type">Individual Projects</h2>
       {renderProjects.map((project) => (
         <Project key={project.id} projectData={project} />
       ))}

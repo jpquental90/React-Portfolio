@@ -12,7 +12,7 @@ const ContactLinks = () => {
         </span>
         <span className="contact-span">
           <img src="images/cvicon.png" alt="cv icon" className="contact-icon" />
-          <a href="https://drive.google.com/file/d/16zIhyyGNWJulZ2MSxDCr4lp75qQEHJ_i/view?usp=sharing" target="_blank" rel="noopener noreferrer">CV</a>
+          <a href="https://drive.google.com/file/d/1CR-1_om9Q_ImuNY5hxSByikpmNtyY6qR/view?usp=sharing" target="_blank" rel="noopener noreferrer">CV</a>
         </span>
         <span className="contact-span">
           <img src="images/githubicon.png" alt="github icon" className="contact-icon" />

@@ -40,11 +40,14 @@ h1 {
   color: rgb(69, 140, 182);
 }
 
-
 a {
   color: #646cff;
   text-decoration: inherit;
 }
 a:hover {
   color: #53babc;
+}
+
+.project-type {
+  margin-top: 2rem;
 }

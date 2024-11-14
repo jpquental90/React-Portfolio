@@ -1,5 +1,101 @@
-.project-image {
-    margin: 15px 0 15px 0;
+/* Card Container */
+.card-project {
+    position: relative;
     max-width: 100%;
+    flex: none;
+    overflow: hidden; /* Keeps overlay and content within bounds */
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    box-shadow: 3px 3px 6px rgba(162, 162, 162, 0.865);
+}
+
+/* Project Image Styling */
+.project-image {
+    width: 100%;
     max-height: 300px;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Overlay Styling */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.overlay h3 {
+    font-weight: 600;
+}
+
+/* Show Overlay and Content on Hover */
+.card-project:hover .overlay {
+    background-color: rgba(74, 61, 82, 0.89);
+    opacity: 1;
+}
+
+/* Hide card-body links by default */
+.card-project-body {
+    position: absolute;
+    bottom: 10px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 5; 
+    text-align: center;
+    opacity: 0; 
+    transition: opacity 0.3s ease, transform 0.3s ease; 
+}
+
+/* Show links on card hover */
+.card-project:hover .card-project-body {
+    opacity: 1; 
+    transform: translateX(-50%) translateY(0); 
+}
+
+.card-project-body a:hover {
+    text-decoration: none;
+}
+
+.project-title a {
+    color:rgb(255, 255, 255); /* Add the color for the clickable title */
+    text-decoration: none; /* Remove underline for the title by default */
+  }
+  
+  .project-title a:hover {
+    color: #ffa345 !important;
+  }
+
+  /* Style the GitHub icon */
+.card-project-body a {
+    display: inline-block; /* Center icon */
+  }
+  
+  /* Change icon color on hover */
+  .card-project-body a:hover {
+    color: #333; /* Dark color for hover effect */
+  }
+  
+  /* Optionally, adjust icon size if needed */
+  .card-project-body a svg {
+    transition: color 0.3s ease;
+  }
+
+  .github-icon {
+  color: rgb(253, 253, 253); /* Default color */
+  transition: color 0.3s ease; /* Smooth transition for hover */
+}
+
+.github-icon:hover {
+  color: #ffa345; /* Hover color */
 }

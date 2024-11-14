@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --bs-body-font-family: 'Poppins', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   font-synthesis: none;
@@ -18,14 +20,8 @@ body {
 
 .card {
   border: none;
-  background-color: rgb(241, 241, 241);
+  background-color: white;
   margin: 2rem;
-  box-shadow: 3px 3px 6px rgba(162, 162, 162, 0.865);
-}
-
-.card-body {
-  max-width: 100%;
-  flex: none;
 }
 
 .card-title {
@@ -46,8 +42,4 @@ a {
 }
 a:hover {
   color: #53babc;
-}
-
-.project-type {
-  margin-top: 2rem;
 }

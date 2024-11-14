@@ -1,3 +1,7 @@
 .intro-title {
     padding-bottom: 1rem;
 }
+
+.about-card {
+    max-width: fit-content;
+}

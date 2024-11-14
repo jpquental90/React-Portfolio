@@ -1,26 +1,33 @@
 import React from 'react';
+import { FaEnvelope } from 'react-icons/fa';
+import { FaFileAlt } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
+import { FaLinkedin } from 'react-icons/fa';
 import './contactlinks.css'
 
-// Separate component for all the contact links, allowing it to be resuable as needed
 const ContactLinks = () => {
   return (
     <div className="card contact-card">
       <div className="card-body contacts-body">
+
         <span className="contact-span">
-          <img src="images/gmailicon.png" alt="gmail icon" className="contact-icon" />
-          <a href="mailto:joanapquental@gmail.com">joanapquental@gmail.com</a>
+        <a href="mailto:joanapquental@gmail.com" target="_blank" rel="noopener noreferrer"><FaEnvelope size={30} className="contact-icon email-icon" /></a>
         </span>
+
         <span className="contact-span">
-          <img src="images/cvicon.png" alt="cv icon" className="contact-icon" />
-          <a href="https://drive.google.com/file/d/1KWGlrNoWmbLU2K-ggDfMr5BBDWJbD75T/view?usp=sharing" target="_blank" rel="noopener noreferrer">CV</a>
+          <a href="https://drive.google.com/file/d/1KWGlrNoWmbLU2K-ggDfMr5BBDWJbD75T/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+          <FaFileAlt size={30} className="contact-icon cv-icon" /></a>
         </span>
-        <span className="contact-span">
-          <img src="images/githubicon.png" alt="github icon" className="contact-icon" />
-          <a href="https://github.com/jpquental90" target="_blank" rel="noopener noreferrer">GitHub</a>
+
+        <span className="contact-span">    
+        <a href="https://github.com/jpquental90" target="_blank" rel="noopener noreferrer">
+        <FaGithub size={30} className="contact-icon github-icon" />
+        </a>
         </span>
+
         <span className="contact-span">
-          <img src="images/linkedinicon.png" alt="linkedin icon" className="contact-icon" />
-          <a href="https://www.linkedin.com/in/joana-quental-31611a293/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/joana-quental-31611a293/" target="_blank" rel="noopener noreferrer">
+        <FaLinkedin size={30} className=" contact-icon linkedin-icon" /></a>
         </span>
       </div>
     </div>

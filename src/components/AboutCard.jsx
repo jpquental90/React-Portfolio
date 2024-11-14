@@ -3,11 +3,11 @@ import './aboutcard.css'
 
 const AboutCard = () => {
   return (
-    <div className="card card-about col-md-5 d-flex justify-content-center">
-      <div className="card-body">
+    <div className="card card-about col-md-4 d-flex justify-content-center">
+      {/* <div className="card-body"> */}
         <h5 className="card-title intro-title">Hello, I'm Joana</h5>
-        <p>Welcome to my front-end development portfolio</p>
-      </div>
+        <p className="intro-text">Welcome to my front-end development portfolio</p>
+      {/* </div> */}
     </div>
   );
 };

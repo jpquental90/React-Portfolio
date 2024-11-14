@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Projects from './pages/Projects';
 import About from './pages/About';
-import './App.css'
 
 // This function brings up the key pages of the app
 function App() {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import groupProjectsData from '../data/groupProjectsData.json'; // Import group projects data
+import groupProjectsData from '../data/groupProjectsData.json';
 import individualProjectsData from '../data/individualProjectsData.json'; 
 import Project from '../components/Project';
 
@@ -20,7 +20,6 @@ const Projects = () => {
       {groupProjectsData.map((project) => (
         <Project key={project.id} projectData={project} />
       ))}
-
     </div>
   );
 };

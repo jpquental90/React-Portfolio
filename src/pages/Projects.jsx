@@ -16,7 +16,7 @@ const Projects = () => {
       {renderProjects.map((project) => (
         <Project key={project.id} projectData={project} />
       ))}
-      <h2 class="project-type">Group Projects</h2>
+      <h3 class="project-type">Group Projects</h3>
       {groupProjectsData.map((project) => (
         <Project key={project.id} projectData={project} />
       ))}

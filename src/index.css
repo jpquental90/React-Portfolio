@@ -8,6 +8,19 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+    /* Primary Colors */
+    --primary-purple: #75107E;
+    --hover-purple: #D58BDD;
+    --seethrough-purple: #9e57b4d8;
+  
+    /* Accent Colors */
+    --accent-orange: #FFA345;
+    
+    /* Neutral Colors */
+    --text-dark: #333333;
+    --white: #F5F5F5;
+    --background-transparent: rgba(117, 16, 126, 0);
 }
 
 #root {
@@ -37,4 +50,8 @@ body {
 
 .main-content {
   padding-top: 60px;
+}
+
+.project-type {
+  color:var(--text-dark);
 }
